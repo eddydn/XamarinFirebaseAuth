@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="XamarinFirebaseAuth.XamarinFirebaseAuth" android:versionCode="1" android:versionName="1.0">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="XamarinFirebaseAuth" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:label="DashBoard" android:theme="@style/AppTheme" android:name="md534ca4efa1883e03c46ec71c9e8830800.DashBoard" />
+    <activity android:label="ForgotPassword" android:theme="@style/AppTheme" android:name="md534ca4efa1883e03c46ec71c9e8830800.ForgotPassword" />
+    <activity android:icon="@drawable/icon" android:label="XamarinFirebaseAuth" android:theme="@style/AppTheme" android:name="md534ca4efa1883e03c46ec71c9e8830800.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="SignUp" android:theme="@style/AppTheme" android:name="md534ca4efa1883e03c46ec71c9e8830800.SignUp" />
+    <provider android:authorities="XamarinFirebaseAuth.XamarinFirebaseAuth.firebaseinitprovider" android:exported="true" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider" />
+    <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="XamarinFirebaseAuth.XamarinFirebaseAuth.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.XamarinFirebaseAuth.XamarinFirebaseAuth" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>
